@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<plugin xmlns="http://apache.org/cordova/ns/plugins/1.0"
+           id="cordova-plugin-calendarplugin"
+      version="1.0.0">
+    <name>Calendar</name>
+    <description>Cordova Calendar Plugin</description>
+    <license>MIT</license>
+
+    <engines>
+      <engine name="cordova-android" version=">=4.0.0" />
+    </engines>
+
+    <platform name="android">
+        <config-file target="res/xml/config.xml" parent="/*">
+            <feature name="CalendarPlugin" >
+                <param name="android-package" value="org.apache.cordova.calendar.CalendarPlugin"/>
+            </feature>
+        </config-file>
+
+        <source-file src="src/android/CalendarPlugin.java" target-dir="src/org/apache/cordova/calendar" />
+		
+		
+        <js-module src="www/calendar.js" name="CalendarPlugin">
+    </js-module>
+        	<info>
+               This plugin will add an event to the native calendar of your device.
+          </info>
+    </platform>
+	
+
+
+</plugin>
